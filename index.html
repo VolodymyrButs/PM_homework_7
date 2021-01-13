@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Homework 7</title>
+  </head>
+  <body id="body">
+    <ol class="description">
+      <li>
+        Click LMB on empty place to call 'create file' button, and click it to
+        create file or move mouse from button to cancel
+      </li>
+      <li>
+        Click RMB on file to call context menu with 'rename' and 'delete'
+        buttons, and click on the required button or move mouse from menu to
+        cancel
+      </li>
+      <li>You can sort files position with mouse dragging</li>
+      <li>
+        Click LMB on empty place and hold it, then move over the items what you
+        want to select, after selecting all required files stop holding the
+        button and click remove button to remove selected files or move mouse
+        from button to cancel
+      </li>
+    </ol>
+    <button id="create" onclick="event.stopPropagation()">Create file</button>
+    <div id="update">
+      <button id="rename" onclick="event.stopPropagation()">rename</button>
+      <button id="delete" onclick="event.stopPropagation()">delete</button>
+    </div>
+    <button class="deleteSelected" onclick="event.stopPropagation()">
+      delete selected
+    </button>
+    <div id="container">
+      <span draggable="true" onclick="event.stopPropagation()">1.html</span>
+      <span draggable="true" onclick="event.stopPropagation()">2.js</span>
+      <span draggable="true" onclick="event.stopPropagation()">3.css</span>
+    </div>
+  </body>
+</html>
